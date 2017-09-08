@@ -1,8 +1,6 @@
 from behave import *
 from main import Calculator
 from nose import *
-import parse
-import parse_type
 
 # use_step_matcher(parse)
 #
@@ -29,7 +27,6 @@ def step_impl(context, x, y):
     """
     obj.a = int(x)
     obj.b = int(y)
-    print 'a= '+str(x)+'\nb= '+str(y)+'\n'
 
 
 @then("output is {z}")
@@ -48,5 +45,4 @@ def step_impl(context, op):
     :type context: behave.runner.Context
     :type op: str
     """
-    print op+' sign\n'
     obj.sign = op

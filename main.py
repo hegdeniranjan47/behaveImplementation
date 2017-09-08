@@ -1,3 +1,6 @@
+import os
+
+
 class Calculator():
     def __init__(self):
         self.a = 0
@@ -7,7 +10,7 @@ class Calculator():
 
     def inputVar(self):
         self.a = eval(raw_input("Enter a: "))
-        self.sign=eval(raw_input("Enter operation: "))
+        self.sign=(raw_input("Enter operation: "))
         self.b = eval(raw_input("Enter b: "))
 
     def operate(self):
@@ -40,11 +43,17 @@ class Calculator():
     def showResult(self):
         print "Result: "+str(self.sum)
 
+
 def main():
-    obj1 = Calculator()
-    obj1.inputVar()
-    obj1.operate()
-    obj1.showResult()
+    x='a'
+    while (x!='z'):
+        obj1 = Calculator()
+        obj1.inputVar()
+        obj1.operate()
+        obj1.showResult()
+        x = (raw_input("\nEnter any key to continue (z to exit)"))
+        print chr(12)
+
 
 
 if __name__ == "__main__":
